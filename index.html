@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <script defer src="./assets/script.js"></script>
+    <title>Calculadora & ParImpar</title>
+</head>
+<body>
+    <div id="titulo">
+        <h1>Calculadora realizada por Oscar Cariaga</h1>
+    </div>
+    <div class="calculadora">
+        <span id="output-auxiliar-texto">0</span>
+        <span id="input-output-texto">0</span>
+        <div class="calculadora-botones">
+            <button type="button" class="btn-gris-oscuro funcion" id="btn-clear">C</button>
+            <button type="button" class="btn-gris-oscuro funcion" id="btn-clear-all">CA</button>
+            <button type="button" class="btn-gris-oscuro operador" id="btn-parimpar">Par</button>
+            <button type="button" class="btn-naranjo operador" id="btn-dividir">÷</button>
+            <button type="button" class="btn-negro-claro numero" id="btn-num-siete">7</button>
+            <button type="button" class="btn-negro-claro numero" id="btn-num-ocho">8</button>
+            <button type="button" class="btn-negro-claro numero" id="btn-num-nueve">9</button>
+            <button type="button" class="btn-naranjo operador" id="btn-multiplicar">×</button>
+            <button type="button" class="btn-negro-claro numero" id="btn-num-cuatro">4</button>
+            <button type="button" class="btn-negro-claro numero" id="btn-num-cinco">5</button>
+            <button type="button" class="btn-negro-claro numero" id="btn-num-seis">6</button>
+            <button type="button" class="btn-naranjo operador" id="btn-restar">−</button>
+            <button type="button" class="btn-negro-claro numero" id="btn-num-uno">1</button>
+            <button type="button" class="btn-negro-claro numero" id="btn-num-dos">2</button>
+            <button type="button" class="btn-negro-claro numero" id="btn-num-tres">3</button>
+            <button type="button" class="btn-naranjo operador" id="btn-sumar">+</button>
+            <button type="button" class="btn-negro-claro" id="btn-ayuda" onclick="MostrarAyuda()">?</button>
+            <button type="button" class="btn-negro-claro numero" id="btn-num-cero">0</button>
+            <button type="button" class="btn-negro-claro numero" id="btn-punto">.</button>
+            <button type="button" class="btn-naranjo funcion" id="btn-resultado">=</button>
+        </div>
+    </div>
+    <div id="ventana-ayuda-contenedor">
+        <div class="ventana-ayuda-contenido">
+            <p><i>Advertencia!</i> Esta calculadora es mayormente funcional, pero puede haber errores. Utilice con precaución 🫡</p>
+            <br>
+            <p>Presione <strong>[+]</strong>, <strong>[-]</strong>, <strong>[*]</strong>, <strong>[/]</strong> o <strong>[%]</strong> en su teclado para realizar operaciones.</p>
+            <br>
+            <p>Presione <strong>[Enter]</strong> o <strong>[Backspace]</strong> en su teclado para ver el resultado o borrar, respectivamente</p>
+        </div>
+        <button type="button" onclick="OcultarAyuda()">↓</button>
+    </div>
+    <!-- Script separado por claridad, dedicado a la ventana de ayuda -->
+    <script>
+        const ventanaAyuda = document.getElementById("ventana-ayuda-contenedor")
+        function MostrarAyuda()
+        {
+            ventanaAyuda.style.opacity = "1"
+            ventanaAyuda.style.visibility = "visible"
+        }
+        function OcultarAyuda()
+        {
+            ventanaAyuda.style.opacity   = "0"
+            ventanaAyuda.style.visibility = "hidden"
+        }
+    </script>
+</body>
+</html>
